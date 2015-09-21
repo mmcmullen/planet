@@ -470,6 +470,7 @@ function drawButtons() {
         string += "<button id='" + jobNames[i] + "' class='buyJob' onclick='buy.job(" + i + ")'><strong>" + jobNames[i] +
             "</strong><br /><span id='" + jobNames[i] + "Amt'></span><br /><span id='" + jobNames[i] + "Cost'></span>" +
             "<br /><progress value='0' max='1' id='" + jobNames[i] + "Progress'></progress></button>";
+		document.getElementById(jobNames[i]).addeventListener('tap',function(e){buy.job(i)});
     }
     document.getElementById("jobsBox").innerHTML = string;
 }
