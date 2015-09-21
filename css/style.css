@@ -1,0 +1,386 @@
+body {
+    background-color:black;
+    font-family:"Share Tech Mono", sans-serif;
+}
+#wrapper {
+    max-width:960px;
+    min-width:960px;
+    margin:0px auto;
+    background-color:#acacac;
+    box-shadow:0px 0px 10px 10px purple;
+}
+#viewScreen {
+    background-color:#ccc;
+    background-image:url("http://i.imgur.com/jZtJZ91.jpg");
+    margin:0px auto;
+}
+#pauseBox {
+    position:absolute;
+    top:10px;
+    left:30px;
+}
+#pauseBox button {
+    height:24px;
+    width:26px;
+    background-color:rgba(0, 0, 0, 0);
+    border:0px;
+    box-shadow:2px 2px 2px;
+}
+strong {
+    font-family:sans-serif;
+}
+#gameName {
+    display:inline-block;
+    line-height:50px;
+    font-family:"Share Tech Mono";
+    color:white;
+    margin-left:20px;
+}
+#menuContainer {
+    display:inline-block;
+    text-align:right;
+    float:right;
+}
+#resourcesBox {
+    text-align:center;
+}
+#resourcesBox div {
+    display:inline-block;
+    width:150px;
+    margin:0px 2px;
+    background-color: #001C00;
+    color:#06BA00;
+}
+#historyDisplay {
+    color:white;
+    overflow-y:scroll;
+    height:80%;
+    width:90%;
+    margin:0px auto;
+}
+#historyDisplay tr:nth-child(1) {background: none;font-size:1.1em;} tr:nth-child(even) {background: rgba(0,200,0,.4)} tr:nth-child(odd) {background: rgba(0,200,0,.1)}
+
+#historyDisplay::-webkit-scrollbar {
+    width: 12px;
+}
+#historyDisplay::-webkit-scrollbar-thumb {
+    background-color:rgb(6, 186, 0);
+    border-radius: 0;
+}
+#historyDisplay::-webkit-scrollbar-thumb:hover {
+    background-color:rgb(7, 222, 0);
+}
+#historyDisplay::-webkit-scrollbar-track {
+    background-color:rgb(4, 128, 0);
+}
+#historyDisplay table {
+    width:800px;
+    text-align:center;
+    margin:0px auto;
+}
+.histPerm {
+    padding-left:25%;
+}
+#galactic {
+    height:100%;
+    background-color:rgba(0, 0, 0, .75);
+    color:white;
+    text-align:center;
+}
+#galacticBox {
+    text-align:center;
+}
+#galacticBox div {
+    display:inline-block;
+    width:200px;
+    height:55px;
+    margin:0px 2px;
+    background-color: #001C00;
+    color:#06BA00;
+    vertical-align:middle;
+    padding:4px 0px;
+    box-shadow:0px 0px 0px 2px #464646;
+}
+#market {
+    color:white;
+    background-color:rgba(0, 0, 0, .75);
+}
+#marketBox {
+    text-align:center;
+}
+#marketBox div {
+    display:inline-block;
+    width:200px;
+    height:55px;
+    margin:0px 2px;
+    background-color: #001C00;
+    color:#06BA00;
+    vertical-align:middle;
+    padding:4px 0px;
+    box-shadow:0px 0px 0px 2px #464646;
+}
+#tickMeters {
+    position:absolute;
+    bottom:75px;
+    width:100%;
+    text-align:center;
+    height:20px;
+}
+#lTick, #rTick {
+    width:370px;
+    height:20px;
+    background-color:black;
+    display:inline-block;
+    border-top:3px solid black;
+}
+#lTick {
+    margin-right:60px;
+}
+#rTick {
+    margin-left:60px
+}
+#lTickValue {
+    display:block;
+    float:right;
+    transition:width 1s;
+    background-color:darkred;
+    width:100%;
+    height:20px;
+}
+#rTickValue {
+    display:block;
+    float:left;
+    transition:width 1s;
+    background-color:darkred;
+    width:100%;
+    height:20px;
+}
+#tickNum {
+    z-index:50;
+    position:absolute;
+    left:0px;
+    width:100%;
+    color:white;
+}
+#options {
+    color:white;
+    background-color:rgba(0, 0, 0, .75);
+}
+#header {
+    background-color:#464646;
+    height:90px;
+}
+#jobsBox {
+    text-align:center;
+    margin-top:10px;
+}
+#jobsBox progress {
+    width:100%;
+    height:5px;
+}
+#jobUpgradeBox {
+    text-align:center;
+}
+#jobUpgradeBox span:nth-child(3) {
+    display:inline-block;
+    font-size:.9em;
+    margin:5px 0px
+}
+#jobUpgradeBox strong {
+    font-size:1.2em;
+}
+#landBox {
+    text-align:center;
+}
+#landBox span {
+    font-size:1.3em;
+    display:inline-block;
+    margin-bottom:0px;
+    height:20px
+}
+#landBox strong {
+    font-size:15px;
+    display:inline-block;
+    vertical-align:middle;
+    height:20px
+}
+#landBox div {
+    display:inline-block;
+    width:156px;
+    height:58px;
+    margin:63px 0px;
+    background-color:#001C00;
+    color:#06BA00;
+}
+#landBox progress {
+    width:90%;
+    height:15px;
+    margin-bottom:5px;
+    background-color:#001C00;
+    border:0px solid;
+    border-radius:8px;
+}
+progress[value]::-webkit-progress-bar {
+    background-color: #064400;
+    box-shadow: 0 2px 3px rgba(0, 255, 0, 0.25) inset;
+    border-radius:2px;
+}
+progress[value]::-webkit-progress-value {
+    border-radius:2px;
+    background-color:#06BA00;
+    background-image:url('http://imgur.com/Pqr3asV');
+}
+.lps {
+    display:inline-block;
+    float:right;
+    font-size:12px !important;
+    position:absolute;
+    bottom:-9px;
+    margin-right:0px;
+    width:140px;
+}
+.spacer {
+    height:500px
+}
+.spacer h1 {
+    margin: 0px 0px 15px 0px;
+    padding-top: 10px;
+}
+.menuScreen {
+    display:none;
+}
+.hudTop {
+    height:75px;
+    background-image:url('http://i.imgur.com/Pqr3asV.png');
+    background-position:bottom;
+    background-repeat:no-repeat;
+}
+.hudBottom {
+    height:125px;
+    position:relative;
+    bottom:0px;
+    background-image:url('http://i.imgur.com/giuGlxC.png');
+    background-position:bottom;
+    background-repeat:no-repeat;
+}
+.hudTop, .hudBottom {
+    font-family:"Share Tech Mono";
+    text-transform:uppercase;
+}
+.resourceDisplay {
+    border-top:3px solid #232323;
+    border-bottom:3px solid #555;
+    border-left:3px solid #363636;
+    border-right:3px solid #505050;
+    padding:4px 0px;
+}
+.galacticDisplay {
+    border-top:3px solid #232323;
+    border-bottom:3px solid #555;
+    border-left:3px solid #363636;
+    border-right:3px solid #505050;
+    padding:4px 0px;
+}
+.landDisplay {
+    border-top:3px solid #232323;
+    border-bottom:3px solid #555;
+    padding:4px 0px;
+    box-shadow:2px 0px 0px 0px #06BA00 inset;
+}
+.landDisplay:nth-child(1) {
+    border-left:3px solid #363636;
+    box-shadow:none;
+}
+.landDisplay:last-child {
+    border-right:3px solid #505050;
+}
+.menuButton {
+    height:50px;
+    display:inline-block;
+    width:160px;
+    border:1px solid;
+    margin:20px 10px 0px 0px;
+    box-shadow:5px 5px;
+    font-family:"Share Tech Mono";
+    font-size:20px;
+    font-weight:700;
+    line-height:20px;
+    vertical-align:middle;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3019+0,cf0404+100;Red+3D */
+    background: #ff3019;
+    /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #ff3019 0%, #cf0404 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #ff3019), color-stop(100%, #cf0404));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #ff3019 0%, #cf0404 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #ff3019 0%, #cf0404 100%);
+    /*   Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #ff3019 0%, #cf0404 100%);
+    /* IE10+ */
+    background: radial-gradient(ellipse at center, #ff3019 0%, #cf0404 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3019', endColorstr='#cf0404', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
+.jobUpgradeButton {
+    height:100px;
+    width:250px;
+    vertical-align:middle;
+}
+.buyJob {
+    display:inline-block;
+    font-family:"Share Tech Mono";
+    width:180px;
+    margin:5px;
+    background-color:#3369FF;
+    border:0px;
+    padding:5px 0px 0px 0px;
+    border-top:5px solid #3575EE;
+    border-bottom:5px solid #19378A;
+    border-left:5px solid #3365F2;
+    border-right:5px solid #2044CC;
+    font-weight:900;
+    font-size:16px;
+    color:black;
+    /*text-shadow:1px 1px 0px white, -1px -1px 0px white, -1px 1px 0px white, 1px -1px 0px white;*/
+}
+.jobAvail {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7abcff+0,60abf8+44,3369ff+100 */
+    background: #7abcff;
+    /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #7abcff 0%, #60abf8 44%, #3369ff 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #7abcff), color-stop(44%, #60abf8), color-stop(100%, #3369ff));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #7abcff 0%, #60abf8 44%, #3369ff 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #7abcff 0%, #60abf8 44%, #3369ff 100%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #7abcff 0%, #60abf8 44%, #3369ff 100%);
+    /* IE10+ */
+    background: radial-gradient(ellipse at center, #7abcff 0%, #60abf8 44%, #3369ff 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7abcff', endColorstr='#3369ff', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
+#popup {
+    z-index:50;
+    position:absolute;
+    ;
+    margin:0px auto;
+    width:100%;
+    max-width:960px;
+    height:700px;
+    display:none;
+}
+#popAlert {
+    background-color:white;
+    width:50%;
+    height:300px;
+    margin:50px auto;
+    position:absolute;
+    top:100px;
+    left:25%;
+}
